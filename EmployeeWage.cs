@@ -104,6 +104,39 @@ namespace EmployeeWage
             return monthlyWage;
         }
 
-        
+        public void EmployeeUntillConditionReached()
+        {
+            int totalHours = 0;
+            int totalWokingDays = 0;
+            int max_HoursInMonth = 100;
+            int employeeHours;
+            int numberOfWorkingDays = 20;
+
+            while (totalHours <= max_HoursInMonth && totalWokingDays < numberOfWorkingDays)
+            {
+                totalWokingDays++;
+                Random random = new Random();
+                int employeeCheck = random.Next(0, 3);
+                switch (employeeCheck)
+                {
+                    case 1:
+                        employeeHours = FULL_WORKING_HOURS;
+                        Console.WriteLine("Employee is full time worker");
+                        break;
+                    case 2:
+                        employeeHours = PART_WORKING_HOURS;
+                        Console.WriteLine("Employee is part time worker");
+                        break;
+                    default:
+                        employeeHours = 0;
+                        Console.WriteLine("Employee is Absent");
+                        break;
+                }
+                totalHours += employeeHours;
+                Console.WriteLine($"Day : {totalWokingDays} EmployeeHours : {employeeHours}");
+            }
+            int totalEmployeeWage = totalHours * WAGE_PER_HOUR;
+            Console.WriteLine($" Total Employee wage is :- {totalEmployeeWage}");
+        }
     }
 }

@@ -10,6 +10,7 @@
             objemployee.PartTimeEmployee();
             objemployee.EmployeeUsingSwitchCase();
             objemployee.MonthlyWage();
+            objemployee.EmployeeUntillConditionReached();
         }
     }
 }
