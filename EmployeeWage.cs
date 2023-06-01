@@ -91,6 +91,19 @@ namespace EmployeeWage
             return employeeWage;
         }
 
+        public int MonthlyWage()
+        {
+            int monthlyWage = 0;
+            for (int day = 1; day <= WORKING_DAYS_PER_MONTH; day++)
+
+            {
+                int dailWage = Daily_Wage();
+                monthlyWage = dailWage;
+            }
+            Console.WriteLine($"Employee monthly wage is : {monthlyWage} ");
+            return monthlyWage;
+        }
+
         
     }
 }

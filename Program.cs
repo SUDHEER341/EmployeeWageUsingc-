@@ -9,7 +9,7 @@
             objemployee.Daily_Wage();
             objemployee.PartTimeEmployee();
             objemployee.EmployeeUsingSwitchCase();
-           
+            objemployee.MonthlyWage();
         }
     }
 }
