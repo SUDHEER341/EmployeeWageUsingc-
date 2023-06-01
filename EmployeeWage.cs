@@ -60,7 +60,10 @@ namespace EmployeeWage
             Console.WriteLine($"Employee Daily Wage is :  {dailyWage}");
             return dailyWage;
         }
-
-        
+          public void PartTimeEmployee()
+        {
+            int employeeCheck = Daily_Wage();
+        }
+      
     }
 }
