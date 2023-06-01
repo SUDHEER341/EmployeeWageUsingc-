@@ -60,10 +60,37 @@ namespace EmployeeWage
             Console.WriteLine($"Employee Daily Wage is :  {dailyWage}");
             return dailyWage;
         }
-          public void PartTimeEmployee()
+
+        public void PartTimeEmployee()
         {
             int employeeCheck = Daily_Wage();
         }
-      
+
+        public int EmployeeUsingSwitchCase()
+        {
+            int employeeHours;
+            int employeeCheck = CheckAttendance();
+
+            switch (employeeCheck)
+            {
+                case 1:
+                    employeeHours = FULL_WORKING_HOURS;
+                    Console.WriteLine("Employee is a FullTime worker ");
+                    break;
+                case 2:
+                    employeeHours = PART_WORKING_HOURS;
+                    Console.WriteLine("Employee is a PartTime worker");
+                    break;
+                default:
+                    employeeHours = 0;
+                    Console.WriteLine("Employee is Absent");
+                    break;
+            }
+            int employeeWage = employeeHours * WAGE_PER_HOUR;
+            Console.WriteLine($"Employee Daily Wage  is : {employeeWage}");
+            return employeeWage;
+        }
+
+        
     }
 }

@@ -8,7 +8,8 @@
             objemployee.CheckAttendance();
             objemployee.Daily_Wage();
             objemployee.PartTimeEmployee();
-            
+            objemployee.EmployeeUsingSwitchCase();
+           
         }
     }
 }
