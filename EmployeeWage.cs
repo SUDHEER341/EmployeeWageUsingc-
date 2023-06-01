@@ -38,6 +38,29 @@ namespace EmployeeWage
             }
         }
 
+        public int Daily_Wage()
+        {
+            int employeeHours;
+            int employeeCheck = CheckAttendance();
+
+            if (employeeCheck == FULL_TIME)
+            {
+                employeeHours = FULL_WORKING_HOURS;
+            }
+            else if (employeeCheck == PART_TIME)
+            {
+                employeeHours = PART_WORKING_HOURS;
+            }
+            else
+            {
+                employeeHours = 0;
+            }
+
+            int dailyWage = employeeHours * WAGE_PER_HOUR;
+            Console.WriteLine($"Employee Daily Wage is :  {dailyWage}");
+            return dailyWage;
+        }
+
         
     }
 }
